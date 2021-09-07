@@ -1,0 +1,31 @@
+topicxuser.form:
+ path: '/topicxuser'
+ defaults:
+   _title: 'topicxuser form'
+   _form: '\Drupal\topicxuser\Form\topicxuserForm'
+ requirements:
+   _permission: 'access content'
+
+topicxuser.editor:
+ path: '/editor/{userid}/{nodeid}'
+ defaults:
+   _title: 'Become an Editor'
+   _controller: '\Drupal\topicxuser\Controller\topicxuserController::content'
+ requirements:
+   _permission: 'access content'    
+
+topicxuser.approve:
+ path: '/approve/{userid}/{nodeid}'
+ defaults:
+   _title: 'Approve  Editor'
+   _controller: '\Drupal\topicxuser\Controller\topicxuserController::approve'
+ requirements:
+   _permission: 'access content' 
+   
+topicxuser.reject:
+ path: '/reject/{userid}/{nodeid}'
+ defaults:
+   _title: 'Reject  Editor'
+   _controller: '\Drupal\topicxuser\Controller\topicxuserController::reject'
+ requirements:
+   _permission: 'access content' 

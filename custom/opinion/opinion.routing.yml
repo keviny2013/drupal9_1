@@ -1,0 +1,7 @@
+opinion.form:
+ path: '/opinion'
+ defaults:
+   _title: 'Opinion form'
+   _form: '\Drupal\opinion\Form\OpinionForm'
+ requirements:
+   _permission: 'access content'

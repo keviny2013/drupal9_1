@@ -1,0 +1,7 @@
+name: Opinion 
+core_version_requirement: ^8.8 || ^9
+type: module
+description: Create opinion based on node
+package: custom
+dependencies:
+ - drupal:block

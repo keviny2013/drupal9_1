@@ -1,0 +1,3 @@
+services:
+  topicxuser.checkpermission.service:
+    class: Drupal\topicxuser\CheckPermission

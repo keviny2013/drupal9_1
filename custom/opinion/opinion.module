@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Implements hook_entity_presave().
+ */
+function opinion_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+    $connection = \Drupal::service('database');
+    switch ($entity->bundle()) {
+      // Here you modify only your day content type
+      case 'topic1':
+        // Setting the title with the value of field_date.
+        foreach($entity->get('field_editor1') as $val){
+            $result = $connection->insert('opinion')
+                ->fields([
+                    'nid' => $entity->id(),
+                    'uid' => $val->target_id,
+                ])
+                ->execute();
+        }
+       break;
+    }
+  }
